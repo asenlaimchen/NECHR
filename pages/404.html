@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Research Not Found</title>
+    <style> 
+        body {
+            background-color: #bdd1f3;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding: 50px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .dog-image {
+            width: 120px;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .back-btn {
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #1a252f;
+        }
+
+        .bite-mark {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+        }
+
+        .torn-paper {
+            width: 180px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img class="bite-mark" src="https://static.vecteezy.com/system/resources/thumbnails/014/624/304/small_2x/dog-and-cat-paws-with-sharp-claws-cute-animal-footprints-png.png" alt="Bite mark">
+        <h1>404 - Research Not Found</h1>
+        <img class="torn-paper" src="https://media.istockphoto.com/id/586388038/photo/bad-dog-sitting-on-the-torn-pieces-of-documents.jpg?s=612x612&w=0&k=20&c=q6Mj7st4hTf-cbaS8e7Xay0W-UCHr_rw3uvgWhFze5E=" alt="Torn Research Paper">
+        <p>We had your research paper right here... but our office dog mistook it for a snack. <br>  
+           In the meantime, you can go back and try again.</p>
+        <img class="dog-image" src="https://img.freepik.com/premium-vector/adorable-dog-gnawing-eating-wires_198278-2641.jpg" alt="Guilty Dog">
+        <button class="back-btn" onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>
