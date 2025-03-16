@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Empowering High School Students Through Research - Unlock Your Potential with NECHR" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Northeastern Centre for High School Research (NECHR)" />
+        <meta property="og:description" content="Join NECHR to engage in cutting-edge research, connect with mentors, and develop critical thinking skills. Explore our resources and begin your research journey today." />
+        <meta property="og:image" content="https://nechr.org/assets/images/logo.png" />
+        <meta property="og:url" content="https://nechr.org" />
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="shortcut icon" href="research-3-svgrepo-com.svg" type="image/x-icon" />
+
+        <title>NECHR</title>
+    </head>
+    <style>
+        .logo-container {
+        display: flex; 
+        align-items: center; 
+        text-decoration: none; 
+        }
+
+        .logo-svg {
+            margin-right: 10px; 
+        }
+
+        .logo-svg img {
+            width: 50px; /* Adjust size of the logo */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Prevent inline rendering quirks */
+        }
+
+        .logo-name {
+            font-size: 1.5rem; /* Adjust text size */
+            color: #ff0000; /* Customize text color */
+            font-weight: bold; /* Make text bold */
+        }
+
+        .md-nav-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-size: 1rem;
+            color: inherit;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .md-nav-link:hover {
+            color: #007BFF; /* Highlight on hover */
+        }
+
+        .md-nav-link svg {
+            width: 24px; /* Size of the icon */
+            height: 24px;
+            margin-right: 0.5rem; /* Space between icon and text */
+        }
+        .hero-section {
+        background: linear-gradient(135deg, #004e92, #000428);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        .hero-subtitle {
+            font-size: 1.3rem;
+            max-width: 850px;
+            margin: 15px auto;
+        }
+        .publication-process {
+            padding: 60px 20px;
+            text-align: center;
+            background: #f4f4f4;
+        }
+        .process-container h2 {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #004e92;
+        }
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .journal-section {
+            margin-bottom: 30px; /* Reduce gap between sections */
+        }
+
+        .student-papers {
+            padding-top: 20px; /* Reduce top padding for a tighter layout */
+        }
+        .process-step {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+        .process-step h3 {
+            font-size: 1.4rem;
+            color: #004e92;
+        }
+        .journal-section, .student-papers {
+            background-color: #e6eefc;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #002855;
+        }
+
+        .journal-intro {
+            color: #4A4A4A;
+        }
+
+        .process-step p {
+            color: #007A99;
+        }
+        .paper-list table {
+            width: 85%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .paper-list th, .paper-list td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .paper-list th {
+            background: #004e92;
+            color: white;
+            text-transform: uppercase;
+        }
+        .paper-list td a {
+            color: #004e92;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .paper-list td a:hover {
+            text-decoration: underline;
+        }
+        .journal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .journal-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+        }
+        .journal-item:hover {
+            transform: translateY(-5px);
+        }
+        .journal-item a {
+            color: #004e92;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .journal-item a:hover {
+            text-decoration: underline;
+        }
+        .student-intro, .journal-intro {
+            font-size: 1.2rem;
+            color: #444;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+        .student-container p {
+            color: #333333;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+
+    </style>
+    <body>
+        <div class="nav-wrapper">
+            <div class="sidebar-wrapper">
+                <div class="md-nav-menu">
+                    <button class="close-nav" type="button" id="close-nav" tippy="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <div class="md-logo-container" style="display: flex; align-items: center;">
+                        <a class="logo-container" href="index.html" tippy="home" style="text-decoration: none; display: flex; align-items: center;">
+                            <span class="logo-svg" style="margin-right: 0.5rem;">
+                                <img src="nehcr_logo.jpg" alt="NECHR" style="transition: transform 0.3s ease;">
+                            </span>
+                            <span class="logo-name" style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 600; color: #f7f7f7; letter-spacing: 0.03em; white-space: nowrap; pointer-events: none;">
+                                NECHR
+                            </span>
+                        </a>
+                    </div>
+                    
+                    <div class="md-nav-links">
+                        <a class="md-nav-link" href="index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg> Home
+                        </a>
+                        <a class="md-nav-link" href="publication.html" style="display: flex; align-items: center; gap: 2px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="22" height="22">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4c-3 0-6 1-6 3v10c0 2 3 3 6 3s6-1 6-3V7c0-2-3-3-6-3z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 7c0-2 3-3 6-3s6 1 6 3" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16 16l4 4" />
+                                <circle cx="18" cy="16" r="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Publication
+                        </a>
+                        
+                        
+                        <a class="md-nav-link" href="about.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg> About 
+                        </a>                                     
+                        <a class="md-nav-link" href="contact.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10c0 6.075 4.925 11 11 11 1.123 0 2.214-.158 3.25-.463l1.765.707a2 2 0 002.6-1.276l.3-1.08a2 2 0 00-.515-1.894l-2.5-2.5a2 2 0 00-1.414-.586h-1.555a1 1 0 00-.707.293l-2.121 2.121a15.923 15.923 0 01-5.657-5.657l2.121-2.121a1 1 0 00.293-.707V7.5a2 2 0 00-.586-1.414l-2.5-2.5A2 2 0 005.81 3.571L4.73 3.27A2 2 0 002.946 5.87l.707 1.765C3.158 7.786 3 8.877 3 10z" />
+                            </svg> Contact
+                        </a>                        
+                        <hr />
+                                          
+                        <a class="md-nav-link" href="pages/404.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                            </svg> Sign Up
+                        </a>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <nav class="navbar">
+                <div class="nav-container">
+                    <a class="logo-container" href="index.html" tippy="home">
+                        <span class="logo-svg">
+                            <img src="nehcr_logo.jpg" alt="NECHR Logo">
+                        </span>
+                        <span class="logo-name" style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 600; color: #18428e; letter-spacing: 0.03em; white-space: nowrap;">
+                            NECHR
+                        </span>
+                        
+                    </a>                    
+                    <div class="nav-menu">
+                        <div class="nav-links">
+                            <a class="nav-link" href="index.html" style="color: #02294b;"> Home </a>
+                            <a class="nav-link" href="publication.html" style="color: #02203a;"> Publication </a>
+                            <a class="nav-link" href="about.html" style="color: #072c4c;"> About </a>
+                            <a class="nav-link" href="contact.html" style="color: #02284a;"> Contact</a>
+                           
+                        </div>
+                    </div>
+                    <div class="nav-btn-wrapper">
+                        <a class="nav-btn" href="pages/404.html" tippy="signUp"> Sign Up </a>
+                    </div>
+                    <button type="button" class="burger" id="burger">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <section class="hero-section">
+            <div class="hero-container">
+                <h1 class="hero-title">Your Research, Your Journey</h1>
+                <p class="hero-subtitle">Publishing is not the goal—learning is. Whether or not your research gets published, what truly matters is the knowledge and experience you gain along the way.</p>
+                <p>Remember Quality Over Quantity</p>
+            </div>
+        </section>
+        
+        <section class="publication-process">
+            <div class="process-container">
+                <h2>The Publishing Process</h2>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <h3>1. Research & Question</h3><br>
+                        <p>Develop a strong research question and choose a suitable methodology.</p>
+                    </div>
+                    <div class="process-step">
+                        <h3>2. Writing & Drafting</h3><br>
+                        <p>Structure your paper, analyze data, and refine your arguments.</p>
+                    </div>
+                    <div class="process-step">
+                        <h3>3. Peer Review & Editing</h3><br>
+                        <p>Get feedback from mentors, revise, and polish your paper.</p>
+                    </div>
+                    <div class="process-step">
+                        <h3>4. Submission & Waiting</h3><br>
+                        <p>Submit your paper to journals and wait for the review process.</p>
+                    </div>
+                    <div class="process-step">
+                        <h3>5. Acceptance/Revision Request or Rejection</h3><br>
+                        <p>If accepted, celebrate! If revisions are suggested do them. If not, revise or work further on your experiments, and submit elsewhere.</p>
+                    </div>
+                    <div class="process-step">
+                        <h3>6. Its all the Process of Learning & Growth</h3><br>
+                        <p>Regardless of the outcome, your research journey continues.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="journal-section">
+            <div class="journal-container">
+                <h2>Where Can You Submit?</h2><br>
+                <p class="journal-intro">Here are some journals that accept high school research papers:</p>
+                <div class="journal-grid">
+                    <div class="journal-item"><a href="https://tcr.org" target="_blank">The Concord Review</a></div>
+                    <div class="journal-item"><a href="https://emerginginvestigators.org/" target="_blank">Journal of Emerging Investigators</a></div>
+                    <div class="journal-item"><a href="http://cjsjournal.org/" target="_blank">Columbia Junior Science Research Journal</a></div>
+                    <div class="journal-item"><a href="https://www.jsr.org/hs/index.php/path" target="_blank">Journal of Student Research</a></div>
+                    <div class="journal-item"><a href="http://www.theyoungresearcher.com/" target="_blank">The Young Researcher</a></div>
+                    <div class="journal-item"><a href="https://ijhighschoolresearch.org/" target="_blank">International Journal of High School Research</a></div>
+                    <div class="journal-item"><a href="http://theschola.org/index.html" target="_blank">The Schola</a></div>
+                    <div class="journal-item"><a href="https://jhss.scholasticahq.com/" target="_blank">Journal of High School Science</a></div>
+                    <div class="journal-item"><a href="https://www.mircore.org/2023-conference/" target="_blank">MirCore – High School Research Conference</a></div>
+                    <div class="journal-item"><a href="https://www.journalresearchhs.org/" target="_blank">The Journal of Research High School (JRHS)</a></div>
+                    <div class="journal-item"><a href="https://www.ygsjournal.com/" target="_blank">Young Global Scientists</a></div>
+                    <div class="journal-item"><a href="http://www.theadroitjournal.org/" target="_blank">Adroit Journal</a></div>
+                    <div class="journal-item"><a href="http://www.cicadamag.com/about" target="_blank">Cicadia</a></div>
+                    <div class="journal-item"><a href="https://www.theclaremontreview.ca/" target="_blank">Claremont Review</a></div>
+                    <div class="journal-item"><a href="http://www.bu.edu/agni/submit.html" target="_blank">AGNI (Boston University)</a></div>
+                    <div class="journal-item"><a href="https://www.rajraf.org/submission-policy" target="_blank">RIsing Asia Journal</a></div>
+                    <div class="journal-item"><a href="https://www.miels.in/author-guidelines" target="_blank">Journal of MIELS</a></div>
+                    <div class="journal-item"><a href="https://youthmedicaljournal.com/" target="_blank">Youth Medical Journal</a></div>
+                    <div class="journal-item"><a href="https://nhsjs.com/?mainpage" target="_blank">National High School Journal of Science</a></div>
+                    <div class="journal-item"><a href="https://journal.stemfellowship.org/about" target="_blank">STEM Fellowship Journal (SFJ)</a></div>
+                    <div class="journal-item"><a href="https://www.impriindia.com/production/iprr-journal/" target="_blank">Impact And Policy Research Review (IPRR)</a></div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="student-papers">
+            <div class="student-container">
+                <h2>Student Published Papers</h2><br>
+                <p>Explore research published by our students and see how their work has contributed to academic discussions.</p><br>
+                <div class="paper-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Student</th>
+                                <th>Published In</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#" target="_blank">Investigation of the Equilibrium Constant and Thermodynamic Properties of Borax Dissolution Using Titration Techniques
+                                </a></td>
+                                <td>Lily Achumi</td>
+                                <td><a href="https://dngc.ac.in/journals/index.php/dngcrj/article/view/191" target="_blank">Deranatung Govt. Research Journal</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" target="_blank">Investigating Senescence in Cut Rose, Accepted Conditionally</a></td>
+                                <td>Claire Sangma</td>
+                                <td><a href="https://emerginginvestigators.org/" target="_blank">Journal of Emerging Investigators</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" target="_blank">Defining the Other: Systemic Alienation, and the Perpetual Marginalization of Northeast India in Modern Indian Policy</a></td>
+                                <td>Narola Jamir</td>
+                                <td><a href="https://www.jsr.org/hs/index.php/path" target="_blank">Impact and Policy Research Review (IPRR)</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        </div>
+    </div>
+        <footer class="footer">
+            <div class="footer-wrapper">
+                <div class="footer-links-wrapper">
+                    <div class="footer-logo-container">
+                        <a href="index.html" class="footer-logo-link" tippy="home">
+                            <span class="logo-svg" style="margin-right: 0.5rem;">
+                                <img src="nehcr_logo.jpg" alt="NECHR Logo" style="transition: transform 0.3s ease;">
+                            </span>
+                            <span class="logo-name" style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 600; color: #010101; letter-spacing: 0.03em; white-space: nowrap; pointer-events: none;">
+                                NECHR
+                            </span>
+                        </a>
+                    </div>
+                    <div class="footer-grid-links">
+                        <div>
+                            <h2 class="footer-grid-headers" style="color: rgb(10, 10, 10)">About us</h2>
+                            <ul class="footer-grid-list">
+                                <li>
+                                    <a href="about.html" style="color: rgb(5, 76, 134)">About</a>
+                                </li>
+                                <li>
+                                    <a href="about.html#team-section" style="color: rgb(4, 76, 134)">Team</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="footer-grid-headers" style="color: rgb(10, 10, 10)" style="color: rgb(10, 10, 10)">Support</h2>
+                            <ul class="footer-grid-list">
+                                <li>
+                                    <a href="pages/404.html" style="color: rgb(12, 77, 131)" >FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html" style="color: rgb(4, 67, 119)">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="pages/404.html" style="color: rgb(10, 78, 134)">Donate</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="footer-grid-headers" style="color: rgb(10, 10, 10)">Legal</h2>
+                            <ul class="footer-grid-list">
+                                <li>
+                                    <a href="pages/404.html" style="color: rgb(10, 79, 135)">Terms</a>
+                                </li>
+                                <li>
+                                    <a href="pages/404.html" style="color: rgb(3, 76, 136)">Privacy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="copyright-social-links">
+                    <span class="copyright-text" style="color:#08684a">© 2023 <a href="index.html" tippy="home" style="color:#eb0505">NECHR</a>. All rights reserved. Credits: <strong style="color:#007655">Asenla Imchen</strong></span>
+                    <div class="social-links">
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@NortheastCentreforHighSchoolRe" target="_blank" tippy="YouTube">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#eb0505" viewBox="0 0 24 24">
+                                <path d="M23.5 6.9c-.3-1.3-1.3-2.3-2.6-2.6C18.6 4 12 4 12 4s-6.6 0-8.9.3c-1.3.3-2.3 1.3-2.6 2.6C0 9.2 0 12 0 12s0 2.8.3 5.1c.3 1.3 1.3 2.3 2.6 2.6C5.4 20 12 20 12 20s6.6 0 8.9-.3c1.3-.3 2.3-1.3 2.6-2.6.3-2.3.3-5.1.3-5.1s0-2.8-.3-5.1zM9.6 15.2V8.8L15.6 12l-6 3.2z"/>
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/nechr.research/?hl=en" target="_blank" tippy="Instagram">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 2.5c2.186 0 2.447.008 3.296.048.845.04 1.418.174 1.944.372.526.197.972.462 1.418.908.446.446.711.892.908 1.418.198.526.332 1.099.372 1.944.04.849.048 1.11.048 3.296s-.008 2.447-.048 3.296c-.04.845-.174 1.418-.372 1.944-.197.526-.462.972-.908 1.418-.446.446-.892.711-1.418.908-.526.198-1.099.332-1.944.372-.849.04-1.11.048-3.296.048s-2.447-.008-3.296-.048c-.845-.04-1.418-.174-1.944-.372-.526-.197-.972-.462-1.418-.908-.446-.446-.711-.892-.908-1.418-.198-.526-.332-1.099-.372-1.944-.04-.849-.048-1.11-.048-3.296s.008-2.447.048-3.296c.04-.845.174-1.418.372-1.944.197-.526.462-.972.908-1.418.446-.446.892-.711 1.418-.908.526-.198 1.099-.332 1.944-.372C7.553 2.508 7.814 2.5 10 2.5zm0-2.5C7.765 0 7.465.008 6.673.048c-.785.038-1.325.17-1.88.36A4.969 4.969 0 0 0 2.71 1.29c-.615.615-1.005 1.241-1.29 2.083-.19.554-.322 1.095-.36 1.88C1.008 7.465 1 7.765 1 10s.008 2.535.048 3.327c.038.785.17 1.325.36 1.88.285.842.675 1.468 1.29 2.083.615.615 1.241 1.005 2.083 1.29.554.19 1.095.322 1.88.36C7.465 18.992 7.765 19 10 19s2.535-.008 3.327-.048c.785-.038 1.325-.17 1.88-.36a4.97 4.97 0 0 0 2.083-1.29c.615-.615 1.005-1.241 1.29-2.083.19-.554.322-1.095.36-1.88C18.992 12.535 19 12.235 19 10s-.008-2.535-.048-3.327c-.038-.785-.17-1.325-.36-1.88A4.969 4.969 0 0 0 17.71 2.71c-.615-.615-1.241-1.005-2.083-1.29-.554-.19-1.095-.322-1.88-.36C12.535 1.008 12.235 1 10 1z" />
+                                <path d="M10 5a5 5 0 1 0 0 10A5 5 0 0 0 10 5zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm5.5-9.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0z" />
+                            </svg>
+                        </a>
+                        <!-- Discord -->
+                        <a href="https://discord.com/" target="_blank" tippy="discord">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                                <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/nehcr" target="_blank" tippy="LinkedIn">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0zM7.12 20.34H3.56V9h3.56v11.34zM5.34 7.56c-1.14 0-2.06-.92-2.06-2.06s.92-2.06 2.06-2.06 2.06.92 2.06 2.06-.92 2.06-2.06 2.06zM20.34 20.34h-3.56v-5.51c0-1.32-.03-3.01-1.83-3.01-1.83 0-2.11 1.43-2.11 2.91v5.61h-3.56V9h3.42v1.55h.05c.48-.9 1.64-1.84 3.38-1.84 3.62 0 4.29 2.38 4.29 5.47v6.16z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+
+        <script src="assets/js/components/nav.js"></script>
+        <script src="assets/js/gridRender.js"></script>
+        <script src="assets/js/routing.js"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
+        <script src="assets/js/tooltip.js"></script>
+    </body>
+
+</html>

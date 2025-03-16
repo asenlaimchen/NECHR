@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Empowering High School Students Through Research - Unlock Your Potential with NECHR" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Northeastern Centre for High School Research (NECHR)" />
+        <meta property="og:description" content="Join NECHR to engage in cutting-edge research, connect with mentors, and develop critical thinking skills. Explore our resources and begin your research journey today." />
+        <meta property="og:image" content="https://nechr.org/assets/images/logo.png" />
+        <meta property="og:url" content="https://nechr.org" />
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="shortcut icon" href="research-3-svgrepo-com.svg" type="image/x-icon" />
+
+        <title>NECHR</title>
+    </head>
+    <style>
+        .logo-container {
+        display: flex; 
+        align-items: center; 
+        text-decoration: none; 
+        }
+
+        .logo-svg {
+            margin-right: 10px; 
+        }
+
+        .logo-svg img {
+            width: 50px; /* Adjust size of the logo */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Prevent inline rendering quirks */
+        }
+
+        .logo-name {
+            font-size: 1.5rem; /* Adjust text size */
+            color: #ff0000; /* Customize text color */
+            font-weight: bold; /* Make text bold */
+        }
+
+        .md-nav-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-size: 1rem;
+            color: inherit;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .md-nav-link:hover {
+            color: #007BFF; /* Highlight on hover */
+        }
+
+        .md-nav-link svg {
+            width: 24px; /* Size of the icon */
+            height: 24px;
+            margin-right: 0.5rem; /* Space between icon and text */
+        }
+        .team-section {
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            padding: 100px 20px;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
+        .team-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #2c3e50;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensures equal-sized cards */
+            gap: 40px;
+            justify-content: center; /* Centers the last row if it has fewer items */
+            align-items: stretch; /* Ensures uniform height for all cards */
+        }
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between; /* Balances content spacing */
+            text-align: center;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            min-height: 320px; /* Set a minimum height so all cards remain equal */
+        }
+        .team-member:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        .team-member img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            filter: grayscale(100%) brightness(90%);
+            margin-bottom: 20px;
+            transition: filter 0.4s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .team-member:hover img {
+            filter: grayscale(0%) brightness(100%);
+            transform: scale(1.1);
+        }
+        .team-member h3 {
+            font-size: 1.7rem;
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 10px;
+            transition: color 0.3s ease-in-out;
+        }
+        .team-member p {
+            font-size: 1.1rem;
+            color: #666;
+            font-style: italic;
+            transition: color 0.3s ease-in-out;
+        }
+        .team-member:hover h3, .team-member:hover p {
+            color: #1e90ff;
+        }
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(30, 144, 255, 0.1);
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+        .team-member:hover::before {
+            opacity: 1;
+        }
+
+    </style>
+    <body>
+        <div class="nav-wrapper">
+            <div class="sidebar-wrapper">
+                <div class="md-nav-menu">
+                    <button class="close-nav" type="button" id="close-nav" tippy="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <div class="md-logo-container" style="display: flex; align-items: center;">
+                        <a class="logo-container" href="index.html" tippy="home" style="text-decoration: none; display: flex; align-items: center;">
+                            <span class="logo-svg" style="margin-right: 0.5rem;">
+                                <img src="nehcr_logo.jpg" alt="NECHR" style="transition: transform 0.3s ease;">
+                            </span>
+                            <span class="logo-name" style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 600; color: #f7f7f7; letter-spacing: 0.03em; white-space: nowrap; pointer-events: none;">
+                                NECHR
+                            </span>
+                        </a>
+                    </div>
+                    
+                    <div class="md-nav-links">
+                        <a class="md-nav-link" href="index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg> Home
+                        </a>
+                        <a class="md-nav-link" href="publication.html" style="display: flex; align-items: center; gap: 2px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="22" height="22">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4c-3 0-6 1-6 3v10c0 2 3 3 6 3s6-1 6-3V7c0-2-3-3-6-3z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 7c0-2 3-3 6-3s6 1 6 3" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16 16l4 4" />
+                                <circle cx="18" cy="16" r="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Publication
+                        </a>
+                        
+                        
+                        <a class="md-nav-link" href="about.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg> About 
+                        </a>                                     
+                        <a class="md-nav-link" href="contact.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10c0 6.075 4.925 11 11 11 1.123 0 2.214-.158 3.25-.463l1.765.707a2 2 0 002.6-1.276l.3-1.08a2 2 0 00-.515-1.894l-2.5-2.5a2 2 0 00-1.414-.586h-1.555a1 1 0 00-.707.293l-2.121 2.121a15.923 15.923 0 01-5.657-5.657l2.121-2.121a1 1 0 00.293-.707V7.5a2 2 0 00-.586-1.414l-2.5-2.5A2 2 0 005.81 3.571L4.73 3.27A2 2 0 002.946 5.87l.707 1.765C3.158 7.786 3 8.877 3 10z" />
+                            </svg> Contact
+                        </a>                        
+                        <hr />
+                                          
+                        <a class="md-nav-link" href="pages/404.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                            </svg> Sign Up
+                        </a>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <nav class="navbar">
+                <div class="nav-container">
+                    <a class="logo-container" href="index.html" tippy="home">
+                        <span class="logo-svg">
+                            <img src="nehcr_logo.jpg" alt="NECHR Logo">
+                        </span>
+                        <span class="logo-name" style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 600; color: #18428e; letter-spacing: 0.03em; white-space: nowrap;">
+                            NECHR
+                        </span>
+                        
+                    </a>                    
+                    <div class="nav-menu">
+                        <div class="nav-links">
+                            <a class="nav-link" href="index.html" style="color: #02294b;"> Home </a>
+                            <a class="nav-link" href="publication.html" style="color: #02203a;"> Publication </a>
+                            <a class="nav-link" href="about.html" style="color: #072c4c;"> About </a>
+                            <a class="nav-link" href="contact.html" style="color: #02284a;"> Contact</a>
+                           
+                        </div>
+                    </div>
+                    <div class="nav-btn-wrapper">
+                        <a class="nav-btn" href="pages/404.html" tippy="signUp"> Sign Up </a>
+                    </div>
+                    <button type="button" class="burger" id="burger">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <main animate="fadeIn">
+            <div class="main-wrapper">
+                <h1 class="header-title">About NECHR</h1>
+                <section>
+                    <div class="section-container">
+                        <article class="about-article">
+                            <p class="paragraph"> 
+                                The Northeast International Centre for High School Research (NECHR) was founded with the primary objective of developing research at the academic level and critical thinking among students in the Northeast region of India. The NECHR, in its initial phases, intended to meet the educational imbalance experienced by the students in the backward region by offering resources, guidance, and opportunities to conduct high-level academic research. The center focused on equipping students with the abilities they would need to succeed in scientific inquiry, academic writing, and problem-solving, with a focus on the particular challenges and cultural contexts of the Northeast.
+                            </p>
+                            <p class="paragraph"> 
+                                Through the years, NECHR expanded its horizon to provide access to high school students all over the world and expanded its objective towards making academic opportunities for research accessible globally. With the perception that education deficits span the entire globe, NECHR established its objective towards establishing a platform wherein students from everywhere in the globe would acquire educational and research opportunities irrespective of socio-economic status. The organization now provides mentorship, research support, and collective academic life to students from various continents with the aim of fostering a multicultural and inclusive community of research. NECHR's initiative still benefits the students by allowing them to make significant inputs in global intellectual discussions and innovations.
+                            </p>
+                        </article>
+                        <article class="about-article">
+                            <p class="subheader">Overview</p>
+                            <div class="overview-container">
+                                <h2 class="overview-title" style="text-align: center;">Connecting High Schoolers with Collegiate Students</h2>
+                                <div class="stats-grid">
+                                    <div class="stat-item" data-value="2019">
+                                        <h3 class="stat-number">2023</h3>
+                                        <p class="stat-text">Founded</p>
+                                    </div>
+                                    <div class="stat-item" data-value="50000">
+                                        <h3 class="stat-number">36+</h3>
+                                        <p class="stat-text">Students Served</p>
+                                    </div>
+                                    <div class="stat-item" data-value="30">
+                                        <h3 class="stat-number">40+</h3>
+                                        <p class="stat-text">Collegiate Volunteers</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+                <section class="offerings-section">
+                    <div class="offerings-container">
+                        <h2 class="offerings-title">What NECHR Offers</h2>
+                        <div class="offerings-grid">
+                            <div class="offerings-item">
+                                <div class="icon">
+                                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2L3 9h3v12h12V9h3L12 2z" stroke="#4A90E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <h3>Mentorship Program</h3>
+                                <p>University students guide high schoolers in crafting basic research papers and literature reviews.</p>
+                            </div>
+                            <div class="offerings-item">
+                                <div class="icon">
+                                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" stroke="#50E3C2" stroke-width="2"/>
+                                        <path d="M9 12l2 2 4-4" stroke="#50E3C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <h3>Research Assistance</h3>
+                                <p>High school students collaborate with university researchers on projects both of them love.</p>
+                            </div>
+                            <div class="offerings-item">
+                                <div class="icon">
+                                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 5v14m7-7H5" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <h3>Workshops & Training</h3>
+                                <p>Interactive sessions on research methodology, academic writing, critical thinking and simply just on university life</p>
+                            </div>
+                            <div class="offerings-item">
+                                <div class="icon">
+                                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14M12 5l7 7-7 7" stroke="#D0021B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <h3>College Guidelines</h3>
+                                <p>Talks about what a university feels like, and on general guidelines and advice on how to apply to colleges</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="team-section" class="team-section">
+                    <div class="team-container">
+                        <h2 class="team-title">Meet Our Current Team</h2>
+                        <div class="team-grid">
+                            <div class="team-member">
+                                <img src="members/luke.png" alt="Team Member">
+                                <h3>Luke Rimmo Lego</h3>
+                                <!--<p>Founder & Director</p> -->
+                            </div>
+                            <div class="team-member">
+                                <img src="members/asen.png" alt="Team Member">
+                                <h3>Asenla Imchen</h3>
+                                <!--<p>Lead Research Mentor</p> -->
+                            </div>
+                            <div class="team-member">
+                                <img src="members/alden.png" alt="Team Member">
+                                <h3>Alden Anothony Sevilla</h3>
+                                <!--<p>Community Coordinator</p> -->
+                            </div>
+                            <div class="team-member">
+                                <img src="members/tim.jpg" alt="Team Member">
+                                <h3>Timothy Lau</h3>
+                                <!--<p>Community Coordinator</p> -->
+                            </div>
+                            <div class="team-member">
+                                <img src="members/jonah.png" alt="Team Member">
+                                <h3>Jonah Diaz</h3>
+                                <!--<p>Program Manager</p> -->
+                            </div>
+                            <div class="team-member">
+                                <img src="members/jonak.png" alt="Team Member">
+                                <h3>Jonak Thakuria</h3>
+                                <!--<p>Program Manager</p> -->
+                            </div>
+                            <div class="team-member">
+                                <img src="members/IMG20240301190834.jpg" alt="Team Member">
+                                <h3>Huidrom Sushant</h3>
+                                <!--<p>Founder & Director</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        </div>
+    </div>
+        <footer class="footer">
+            <div class="footer-wrapper">
+                <div class="footer-links-wrapper">
+                    <div class="footer-logo-container">
+                        <a href="index.html" class="footer-logo-link" tippy="home">
+                            <span class="logo-svg" style="margin-right: 0.5rem;">
+                                <img src="nehcr_logo.jpg" alt="NECHR Logo" style="transition: transform 0.3s ease;">
+                            </span>
+                            <span class="logo-name" style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 600; color: #010101; letter-spacing: 0.03em; white-space: nowrap; pointer-events: none;">
+                                NECHR
+                            </span>
+                        </a>
+                    </div>
+                    <div class="footer-grid-links">
+                        <div>
+                            <h2 class="footer-grid-headers" style="color: rgb(10, 10, 10)">About us</h2>
+                            <ul class="footer-grid-list">
+                                <li>
+                                    <a href="about.html" style="color: rgb(5, 76, 134)">About</a>
+                                </li>
+                                <li>
+                                    <a href="about.html#team-section" style="color: rgb(4, 76, 134)">Team</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="footer-grid-headers" style="color: rgb(10, 10, 10)" style="color: rgb(10, 10, 10)">Support</h2>
+                            <ul class="footer-grid-list">
+                                <li>
+                                    <a href="pages/404.html" style="color: rgb(12, 77, 131)" >FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html" style="color: rgb(4, 67, 119)">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="pages/404.html" style="color: rgb(10, 78, 134)">Donate</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="footer-grid-headers" style="color: rgb(10, 10, 10)">Legal</h2>
+                            <ul class="footer-grid-list">
+                                <li>
+                                    <a href="pages/404.html" style="color: rgb(10, 79, 135)">Terms</a>
+                                </li>
+                                <li>
+                                    <a href="pages/404.html" style="color: rgb(3, 76, 136)">Privacy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="copyright-social-links">
+                    <span class="copyright-text" style="color:#08684a">© 2023 <a href="index.html" tippy="home" style="color:#eb0505">NECHR</a>. All rights reserved. Credits: <strong style="color:#007660">Asenla Imchen</strong></span>
+                    <div class="social-links">
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@NortheastCentreforHighSchoolRe" target="_blank" tippy="YouTube">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#eb0505" viewBox="0 0 24 24">
+                                <path d="M23.5 6.9c-.3-1.3-1.3-2.3-2.6-2.6C18.6 4 12 4 12 4s-6.6 0-8.9.3c-1.3.3-2.3 1.3-2.6 2.6C0 9.2 0 12 0 12s0 2.8.3 5.1c.3 1.3 1.3 2.3 2.6 2.6C5.4 20 12 20 12 20s6.6 0 8.9-.3c1.3-.3 2.3-1.3 2.6-2.6.3-2.3.3-5.1.3-5.1s0-2.8-.3-5.1zM9.6 15.2V8.8L15.6 12l-6 3.2z"/>
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/nechr.research/?hl=en" target="_blank" tippy="Instagram">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 2.5c2.186 0 2.447.008 3.296.048.845.04 1.418.174 1.944.372.526.197.972.462 1.418.908.446.446.711.892.908 1.418.198.526.332 1.099.372 1.944.04.849.048 1.11.048 3.296s-.008 2.447-.048 3.296c-.04.845-.174 1.418-.372 1.944-.197.526-.462.972-.908 1.418-.446.446-.892.711-1.418.908-.526.198-1.099.332-1.944.372-.849.04-1.11.048-3.296.048s-2.447-.008-3.296-.048c-.845-.04-1.418-.174-1.944-.372-.526-.197-.972-.462-1.418-.908-.446-.446-.711-.892-.908-1.418-.198-.526-.332-1.099-.372-1.944-.04-.849-.048-1.11-.048-3.296s.008-2.447.048-3.296c.04-.845.174-1.418.372-1.944.197-.526.462-.972.908-1.418.446-.446.892-.711 1.418-.908.526-.198 1.099-.332 1.944-.372C7.553 2.508 7.814 2.5 10 2.5zm0-2.5C7.765 0 7.465.008 6.673.048c-.785.038-1.325.17-1.88.36A4.969 4.969 0 0 0 2.71 1.29c-.615.615-1.005 1.241-1.29 2.083-.19.554-.322 1.095-.36 1.88C1.008 7.465 1 7.765 1 10s.008 2.535.048 3.327c.038.785.17 1.325.36 1.88.285.842.675 1.468 1.29 2.083.615.615 1.241 1.005 2.083 1.29.554.19 1.095.322 1.88.36C7.465 18.992 7.765 19 10 19s2.535-.008 3.327-.048c.785-.038 1.325-.17 1.88-.36a4.97 4.97 0 0 0 2.083-1.29c.615-.615 1.005-1.241 1.29-2.083.19-.554.322-1.095.36-1.88C18.992 12.535 19 12.235 19 10s-.008-2.535-.048-3.327c-.038-.785-.17-1.325-.36-1.88A4.969 4.969 0 0 0 17.71 2.71c-.615-.615-1.241-1.005-2.083-1.29-.554-.19-1.095-.322-1.88-.36C12.535 1.008 12.235 1 10 1z" />
+                                <path d="M10 5a5 5 0 1 0 0 10A5 5 0 0 0 10 5zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm5.5-9.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0z" />
+                            </svg>
+                        </a>
+                        <!-- Discord -->
+                        <a href="https://discord.com/" target="_blank" tippy="discord">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                                <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+                            </svg>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/company/nehcr" target="_blank" tippy="LinkedIn">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0zM7.12 20.34H3.56V9h3.56v11.34zM5.34 7.56c-1.14 0-2.06-.92-2.06-2.06s.92-2.06 2.06-2.06 2.06.92 2.06 2.06-.92 2.06-2.06 2.06zM20.34 20.34h-3.56v-5.51c0-1.32-.03-3.01-1.83-3.01-1.83 0-2.11 1.43-2.11 2.91v5.61h-3.56V9h3.42v1.55h.05c.48-.9 1.64-1.84 3.38-1.84 3.62 0 4.29 2.38 4.29 5.47v6.16z"/>
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+
+        <script src="assets/js/components/nav.js"></script>
+        <script src="assets/js/gridRender.js"></script>
+        <script src="assets/js/routing.js"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
+        <script src="assets/js/tooltip.js"></script>
+    </body>
+
+</html>
