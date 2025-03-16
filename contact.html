@@ -16,6 +16,75 @@
         <title>NECHR</title>
     </head>
     <style>
+        /* For the sidebar wrapper */
+.sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px; /* Adjust width as needed */
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.2); /* Light transparent white */
+    backdrop-filter: blur(10px); /* Creates the glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2); /* Adds depth */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Overlay behind the sidebar */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 999;
+    visibility: hidden; /* Hide initially */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* When menu is open */
+.sidebar-wrapper.open .overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Glass effect styling */
+.sidebar-wrapper .md-nav-menu {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15); /* Light transparent white */
+    backdrop-filter: blur(10px); /* Glass blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 20px;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+/* Close button */
+.close-nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* For when the menu is closed */
+.sidebar-wrapper.closed {
+    transform: translateX(100%); /* Push the menu out */
+}
+
+/* For the main content (if you want to make it blur when the menu is open) */
+.nav-wrapper {
+    transition: filter 0.3s ease;
+}
+
+.sidebar-wrapper.open ~ .nav-wrapper {
+    filter: blur(5px); /* Add a blur effect to the main content */
+}
+
         .logo-container {
         display: flex; 
         align-items: center; 
