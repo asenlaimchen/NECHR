@@ -297,8 +297,38 @@
                 });
             }, 1000); // Delay to prevent immediate scraping
         });
-
-
+    document.addEventListener("DOMContentLoaded", function () {
+        // Prevent Right Click on Video
+        document.addEventListener("contextmenu", function (event) {
+            if (event.target.tagName === "VIDEO" || event.target.tagName === "SOURCE") {
+                event.preventDefault();
+            }
+        });
+    
+        // Prevent Video Downloading
+        let videos = document.querySelectorAll("video");
+        videos.forEach(video => {
+            video.controls = false; // Hide controls initially
+            video.setAttribute("oncontextmenu", "return false;"); // Prevent right-click
+            
+            // Enable controls only when playing
+            video.addEventListener("play", () => {
+                video.controls = true;
+            });
+    
+            // Disable video URL copying
+            let sources = video.getElementsByTagName("source");
+            for (let source of sources) {
+                source.setAttribute("oncontextmenu", "return false;");
+                source.setAttribute("download", "false");
+            }
+    
+            // Block Dragging
+            video.addEventListener("dragstart", function (event) {
+                event.preventDefault();
+            });
+        });
+    });
     </script>
     <body>
         <div class="nav-wrapper">
