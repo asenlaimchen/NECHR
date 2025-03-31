@@ -180,6 +180,53 @@
 
 
     </style>
+    <script>
+        // Disable Right Click
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+        });
+
+        // Disable Dragging
+        document.addEventListener("dragstart", function(event) {
+            event.preventDefault();
+        });
+
+        // Disable Keyboard Shortcuts for View Source, Print, Save, Inspect Element
+        document.addEventListener("keydown", function(event) {
+            if (event.ctrlKey && (event.key === "u" || event.key === "s" || event.key === "p" || event.key === "c")) {
+                event.preventDefault();
+            }
+            if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+                event.preventDefault();
+            }
+        });
+
+        // Prevent Copying & Pasting
+        document.addEventListener("copy", function(event) {
+            event.preventDefault();
+        });
+
+        document.addEventListener("paste", function(event) {
+            event.preventDefault();
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let images = document.querySelectorAll("img");
+        
+            images.forEach(img => {
+                img.setAttribute("data-src", img.src); // Store original src
+                img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAcAACwAAAAAAQABAAACAkQBADs="; // Transparent 1x1 pixel image
+            });
+        
+            setTimeout(() => {
+                images.forEach(img => {
+                    img.src = img.getAttribute("data-src"); // Restore original image
+                });
+            }, 1000); // Delay to prevent immediate scraping
+        });
+
+
+    </script>
     <body>
         <div class="nav-wrapper">
             <div class="sidebar-wrapper">
