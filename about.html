@@ -283,20 +283,6 @@
             event.preventDefault();
         });
 
-        // Prevent Direct Access to Image URLs
-        window.addEventListener("load", function() {
-            let images = document.querySelectorAll("img");
-            images.forEach(img => {
-                img.src = ""; // Clears src
-                img.setAttribute("data-src", "image1.jpg"); // Stores src in data attribute
-            });
-
-            setTimeout(() => {
-                images.forEach(img => {
-                    img.src = img.getAttribute("data-src"); // Restores src dynamically
-                });
-            }, 1000); // Delays setting src to avoid URL scraping
-        });
     </script>
     <body>
         <div class="nav-wrapper">
